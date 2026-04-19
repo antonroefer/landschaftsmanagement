@@ -1,79 +1,106 @@
-# Data Project Template
+# Flood Damage Estimation
 
-<a target="_blank" href="https://datalumina.com/">
-    <img src="https://img.shields.io/badge/Datalumina-Project%20Template-2856f7" alt="Datalumina Project" />
-</a>
+Geo411 course project repository for the practical assignment "09_Flood_Damage_Estimation: Multi-Event Comparison and Solution Labs for Infrastructure Siting".
 
-## Cookiecutter Data Science
-This project template is a simplified version of the [Cookiecutter Data Science](https://cookiecutter-data-science.drivendata.org) template, created to suit the needs of Datalumina and made available as a GitHub template.
+This repository is currently a project scaffold. The Python modules in `src/` are placeholders, so the README focuses on the course task, expected workflow, and how to organize the project while the analysis is being developed.
 
-## Adjusting .gitignore
+## Course context
 
-Ensure you adjust the `.gitignore` file according to your project needs. For example, since this is a template, the `/data/` folder is commented out and data will not be exlucded from source control:
+The module combines geoinformatics, remote sensing, and project work. For this assignment, the topic is flood damage estimation with a focus on comparing one or more flood events and translating the analysis into a compact planning workflow for resilient infrastructure siting.
 
-```plaintext
-# exclude data from source control by default
-# /data/
+Course material:
+
+- [Course description](references/course-notes/Geo411_s2026_Kursbeschreibung.pdf)
+- [Task sheet: Flood Damage Estimation](references/course-notes/09_Flood_Damage_Estimation_Multi_Event_Comparison_and_Solution_Labs_for_Infrastructure_Siting_Schultz.pdf)
+
+## Assignment goal
+
+The task goes beyond flood extent mapping. The goal is to assess where flood impacts recur, which exposed assets are affected, and where resilient siting or adaptation measures would be most suitable.
+
+The expected outcomes are:
+
+- An event-specific or comparative flood impact assessment based on open earth observation data.
+- An exposure-based estimate of relative flood damage or affected assets.
+- A suitability map for resilient infrastructure siting or adaptation measures.
+- A transparent multi-criteria workflow with explicit assumptions and limitations.
+
+## Suggested workflow
+
+1. Select one flood event or two comparable events.
+2. Derive flood extent or flood-damage proxies with Sentinel-1.
+3. Optionally support the analysis with Sentinel-2 or other open raster layers.
+4. Overlay the hazard footprint with exposed assets such as buildings, transport lines, land use, or other relevant layers.
+5. Identify repeatedly exposed areas and estimate relative damage or affected assets.
+6. Build a compact suitability analysis for resilient siting based on hazard avoidance, elevation, accessibility, land cover, and practical constraints.
+7. Present the results as a map package or a lightweight WebGIS concept.
+
+## Deliverables for the module
+
+The course description asks for several outputs in addition to the practical analysis:
+
+- A literature review matrix that justifies the method choice.
+- A work package description with milestones and a Gantt chart.
+- A short webinar or teaching unit for fellow students.
+- A presentation of the results.
+- A mini-paper of up to 10 pages.
+
+If you are using this repository for the 09_Flood_Damage_Estimation task, the practical analysis should feed those deliverables directly.
+
+## Repository structure
+
+```
+├── data
+│   ├── external       <- Third-party input data
+│   ├── interim        <- Intermediate processing results
+│   ├── processed      <- Cleaned analysis-ready datasets
+│   └── raw            <- Original source data
+│
+├── references        <- Course notes, manuals, and other source material
+│   └── course-notes   <- PDFs used for this project
+│
+├── reports           <- Generated analysis outputs
+│   └── figures       <- Maps and figures for reports
+│
+├── src               <- Python project code
+│   ├── __init__.py
+│   └── main.py       <- Entry point for the current Python scaffold
+│
+└── requirements.txt  <- Python dependencies
 ```
 
-Typically, you want to exclude this folder if it contains either sensitive data that you do not want to add to version control or large files.
+## Working with the project
 
-## Duplicating the .env File
-To set up your environment variables, you need to duplicate the `.env.example` file and rename it to `.env`. You can do this manually or using the following terminal command:
+The repository keeps the Python scaffold intentionally small at the moment, so the recommended workflow is to organize the data and analysis products first, then extend `src/` only as new processing steps are needed.
+
+- Put source data in `data/raw/`.
+- Save cleaned or merged datasets in `data/processed/`.
+- Keep intermediate transformation outputs in `data/interim/`.
+- Store figures and report exports in `reports/`.
+- Use `references/course-notes/` for the PDF source material and other course documents.
+
+## Environment setup
+
+The environment is intentionally minimal at the moment. Install the listed dependencies and create a local `.env` file if you need configuration variables.
 
 ```bash
-cp .env.example .env # Linux, macOS, Git Bash, WSL
-copy .env.example .env # Windows Command Prompt
+pip install -r requirements.txt
 ```
 
-This command creates a copy of `.env.example` and names it `.env`, allowing you to configure your environment variables specific to your setup.
+On Windows PowerShell:
 
-
-## Project Organization
-
-```
-├── LICENSE            <- Open-source license if one is chosen
-├── README.md          <- The top-level README for developers using this project
-├── data
-│   ├── external       <- Data from third party sources
-│   ├── interim        <- Intermediate data that has been transformed
-│   ├── processed      <- The final, canonical data sets for modeling
-│   └── raw            <- The original, immutable data dump
-│
-├── models             <- Trained and serialized models, model predictions, or model summaries
-│
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`
-│
-├── references         <- Data dictionaries, manuals, and all other explanatory materials
-│
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
-│
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
-│
-└── src                         <- Source code for this project
-    │
-    ├── __init__.py             <- Makes src a Python module
-    │
-    ├── config.py               <- Store useful variables and configuration
-    │
-    ├── dataset.py              <- Scripts to download or generate data
-    │
-    ├── features.py             <- Code to create features for modeling
-    │
-    │    
-    ├── modeling                
-    │   ├── __init__.py 
-    │   ├── predict.py          <- Code to run model inference with trained models          
-    │   └── train.py            <- Code to train models
-    │
-    ├── plots.py                <- Code to create visualizations 
-    │
-    └── services                <- Service classes to connect with external platforms, tools, or APIs
-        └── __init__.py 
+```powershell
+Copy-Item .env.example .env
 ```
 
---------
+## Current code entry points
+
+At the moment, the Python package only contains a minimal scaffold:
+
+- `src/main.py` as the current entry point.
+- `src/__init__.py` to keep the package importable.
+
+Add new modules here only when they support the flood-damage workflow directly.
+
+## Notes
+
+The course task emphasizes a transparent, defensible workflow. Keep assumptions, limitations, and data sources documented alongside the analysis so they can be reused in the presentation and mini-paper.
