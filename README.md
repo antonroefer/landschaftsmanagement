@@ -24,52 +24,113 @@ The expected outcomes are:
 - A suitability map for resilient infrastructure siting or adaptation measures.
 - A transparent multi-criteria workflow with explicit assumptions and limitations.
 
-## Suggested workflow (Project Phases)
+## Project timeline (Summer Term 2026)
 
-To align this project with the official GEO 411 timeline (Summer Term 2026), the work is structured into five phases that match the required submissions and presentation dates.
+The project is organized into four phases and follows the detailed time plan below.
 
-**Phase 1: Literature Review and Project Planning (April 13 - April 27)**
-- Review project management requirements and define the analysis scope.
-- Build a literature review matrix to justify method selection.
-- Draft the work package description with milestones and a Gantt chart.
-- Submission deadline: April 24, 18:00 (presentation slides, review matrix, and Gantt chart).
-- In-class presentation: April 27, 12:00 - 16:00 (10 min talk + 5 min discussion).
+### Phase 1: Exploration, Methodology, and Planning (group task)
 
-**Phase 2: Data Preparation, Event Selection, and Webinar Production (April 28 - May 22)**
-- Select flood events and collect relevant EO and ancillary datasets.
-- Perform preprocessing and initial flood/exposure mapping.
-- Prepare the teaching webinar and short practical guide.
-- Webinar deadline: May 22, 18:00.
+**1.1 Literature review and method benchmark**
+- Scope: Build a method overview and select algorithms for Sentinel-1 and Sentinel-2 processing workflows.
+- Start: April 13, 2026
+- End: April 24, 2026 (18:00)
 
-**Phase 3: Core Analysis and Suitability Modelling (May 23 - June 29)**
-- Continue exposure and relative damage estimation across event(s).
-- Develop and refine the multi-criteria suitability workflow for resilient siting.
-- Integrate peer-learning inputs and webinar feedback (feedback session: June 8).
-- Consolidate intermediate outputs into map-ready and report-ready results.
-- Note: May 25 is a public holiday (Pfingstmontag).
+**1.2 Event research and data acquisition**
+- Scope: Select two comparable flood events with a strong data basis.
+- Start: April 13, 2026
+- End: April 24, 2026 (18:00)
 
-**Phase 4: Results Presentation (June 30 - July 7)**
-- Finalize figures, maps, and conference-style result narrative.
-- Prepare the final presentation (20 min talk + 15 min discussion).
-- PPT submission deadline: Friday before presentation at 12:00 (expected July 3).
-- Final presentations: July 6 and July 7.
+**1.3 Workflow specification and time planning**
+- Scope: Define work packages and structure the project
+- Start: April 20, 2026
+- End: April 24, 2026 (18:00)
+- Predecessor: 1.1
 
-**Phase 5: Mini-Paper Finalization (July 8 - July 24)**
-- Write and polish the mini-paper (max. 10 pages, excluding table of contents and references).
-- Ensure consistency between methods, results, discussion, and conclusions.
-- Final submission deadline: July 24, 18:00.
+**Submission S1: Planning documents and review matrix**
+- Date: April 24, 2026 (deadline)
 
-## Deliverables for the module
+**Milestone M1: Presentation of methodology and timeline**
+- Date: April 27, 2026 (in class)
 
-The course description asks for several outputs in addition to the practical analysis:
+### Phase 2: Flood impact analysis (group task)
 
-- Literature review matrix plus short presentation (presented April 27; files due April 24, 18:00).
-- Work package description including milestones and Gantt chart (submitted with the April 24 package; presented April 27).
-- Webinar (about 20 minutes) plus short guide (due May 22, 18:00).
-- Final results presentation in conference format (July 6/7; slides due Friday before at 12:00).
-- Mini-paper (max. 10 pages) due July 24, 18:00.
+**2.1 Remote sensing: flood delineation**
+- Scope: Process Sentinel-1 data and create flood extent masks.
+- Start: April 28, 2026
+- End: May 15, 2026
+- Predecessor: M2
+- Outcome: Event-specific comparative flood impact assessment.
 
-If you are using this repository for the 09_Flood_Damage_Estimation task, the practical analysis should feed those deliverables directly.
+**2.2 Asset overlay and exposure assessment**
+- Scope: Overlay flood masks with buildings, transport infrastructure, and land use (OSM).
+- Start: May 18, 2026
+- End: June 5, 2026
+- Predecessor: 2.1
+
+**Submission S2: Webinar to present the project's approach**
+- Date: May 22, 2026 (deadline)
+
+**2.3 Hotspot identification and damage estimation**
+- Scope: Identify repetitive hotspots and estimate affected assets.
+- Start: June 8, 2026
+- End: June 19, 2026
+- Predecessor: 2.2
+- Outcome: Exposure-based estimate of relative flood damage.
+
+**Milestone M2: Data ready for flood impact assessment**
+- Date: June 19, 2026
+
+### Phase 3: Measures, suitability analysis, and visualization (group task)
+
+**3.1 Multi-criteria suitability analysis (MCA)**
+- Scope: Develop the model (hazard avoidance, elevation, accessibility).
+- Start: June 22, 2026
+- End: June 30, 2026
+- Predecessor: 2.3
+
+**3.2 Final visualization package (map package / WebGIS concept)**
+- Scope: Cartographic preparation of project results.
+- Start: June 25, 2026
+- End: July 3, 2026 (12:00)
+- Outcome: Suitability map for resilient infrastructure siting.
+
+**3.3 Final results presentation (PPTX)**
+- Scope: Summarize workflow, assumptions, and results.
+- Start: June 29, 2026
+- End: July 3, 2026 (12:00)
+
+**Submission S3: Final presentation slides**
+- Date: July 3, 2026 (12:00)
+
+**Milestone M3: Presentation of project results**
+- Date: July 6 / July 7, 2026
+
+### Phase 4: Finalization and documentation (group task)
+
+**4.1 Mini-paper drafting (methods and results)**
+- Scope: Scientific write-up of the transparent workflow.
+- Start: July 8, 2026
+- End: July 17, 2026
+- Predecessor: M4
+
+**4.2 Mini-paper finalization (discussion and review)**
+- Scope: Interpret results and assess limitations (maximum 10 pages).
+- Start: July 18, 2026
+- End: July 24, 2026 (18:00)
+
+**Milestone M4: Final mini-paper submission (project close)**
+- Date: July 24, 2026 (18:00)
+
+## Key deliverables and milestone dates
+
+- Planning documents and review matrix (M1): April 24, 2026 (18:00).
+- In-class methodology and timeline presentation (M2): April 27, 2026.
+- Event-specific comparative flood impact assessment: after task 2.1.
+- Exposure-based relative damage estimate: after task 2.3.
+- Suitability map for resilient infrastructure siting: after task 3.2.
+- Final presentation slides (M3): July 3, 2026 (12:00).
+- Final project presentation (M4): July 6 / July 7, 2026.
+- Mini-paper submission (M5): July 24, 2026 (18:00).
 
 ## Repository structure
 
