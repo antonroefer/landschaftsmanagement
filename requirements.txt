@@ -1,2 +1,13 @@
 ipykernel
 python-dotenv
+pandas
+tqdm
+seaborn
+matplotlib
+scikit-learn
+scipy
+statsmodels
+missingno
+requests
+rasterio
+docling
